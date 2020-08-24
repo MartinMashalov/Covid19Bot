@@ -4,13 +4,13 @@ from test1 import send_message
 import time
 import findCounty as fc
 from nearestCentersDictionary import nearest_centers
-from test import formulate_message
-import urllib.request
+from makeMessage import formulate_message
+from test import cases_data
 import os, ssl
 import random
+from puns import puns
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
-
 
 
 app = Flask(__name__)
@@ -41,8 +41,10 @@ def sms_reply():
 
     if msg.lower() == "Hi".lower() or msg.lower() == "hello".lower():
         send_message("Hi There! I'm CovidBot. I'm here to help you navigate your way through this pandemic safely.", bot_number, phone_no)
-        time.sleep(1)
+        time.sleep(0.8)
         responded = send_menu(bot_number, phone_no)
+        time.sleep(0.9)
+        send_message("Your zip code is needed for some of the main features. Please supply your zip code: ", bot_number, phone_no)
 
     elif msg.lower() == "joke".lower():
         send_message("Hippos are blue?", bot_number, phone_no)
@@ -58,7 +60,18 @@ def sms_reply():
                 send_message("Which county are you located in: {}".format(county[1]), bot_number, phone_no)
             # length 1, no need for more user input
             else:
-                send_message("The number of cases are: (Westchester not complete)  ", bot_number, phone_no)
+                #county = fc.find_county_by_zip_code(zip)
+                data = cases_data(county[1])
+                send_message("Data for {} county:\n"
+                             ""
+                             "There are {} confirmed cases\n"
+                             "{} deaths in total\n"
+                             "{} have recovered from Covid-19\n"
+                             "The number of active cases is at {}\n"
+                             ""
+                             "The incidence rate (number of new cases) is {}\n"
+                             ""
+                             "The mortality rate lies at {}.".format(data[-1], data[0], data[1], data[2], data[3], round(data[4], 2), str(round(data[5], 2)) + "%"), bot_number, phone_no)
         else:
             send_message("Supply a zip code:", bot_number, phone_no)
 
@@ -71,7 +84,7 @@ def sms_reply():
         else:
             del user_zips[phone_no]
             user_zips[phone_no] = [int(msg)]
-        send_message("Got it! Re-enter the letter you type before.", bot_number, phone_no)
+        send_message("Got it!", bot_number, phone_no)
         print(user_zips)
 
     #myths debunked (OPERATIONAL)
@@ -85,10 +98,14 @@ def sms_reply():
             search = str(user_zips[phone_no][0]) + ", New York"
             centers = nearest_centers[search]
 
-            print(centers)
+            first_test_center = formulate_message(centers[0][1])
+            second_test_center = formulate_message(centers[1][1])
+            third_test_center = formulate_message(centers[2][1])
+            fourth_test_center = formulate_message(centers[3][1])
+            fifth_test_center = formulate_message(centers[4][1])
 
-            send_message(formulate_message(centers[0][1]), bot_number, phone_no)
-            time.sleep(1)
+            print(first_test_center, fourth_test_center)
+            send_message(first_test_center + "\n" + " " + "\n" + second_test_center + "\n" + " " + "\n" + third_test_center + "\n" + " " + "\n" + fourth_test_center + "\n" + " " + "\n" + fifth_test_center, bot_number, phone_no)
             '''
             send_message(formulate_message(centers[1][1]), bot_number, phone_no)
             time.sleep(1)
@@ -98,24 +115,62 @@ def sms_reply():
         else:
             send_message("Please provide a zip code and re-enter the letter you typed:  ", bot_number, phone_no)
 
+    elif msg.lower() == 'D'.lower():
+        send_message("Type the number of the friend you want to share with: ", bot_number, phone_no)
+
+    elif msg.lower() == 'E'.lower():
+        send_message("You help is needed!", bot_number, phone_no)
+        time.sleep(0.5)
+        send_message("https://www.unicefusa.org/?form=HealthEmergency&utm_content=corona3responsive_E2001&ms=cpc_dig_2020_Emergencies_20200402_google_corona3responsive_delve_E2001&initialms=cpc_dig_2020_Emergencies_20200402_google_corona3responsive_delve_E2001&gclid=CjwKCAjwm_P5BRAhEiwAwRzSOyezPDpOahj2yFSuxeaXR9PKRUTNn9vkwjfOJIznTwkXF-0-HuJuFBoCdzkQAvD_BwE", bot_number, phone_no)
+
+    elif msg.lower() == 'F'.lower():
+        send_message("Covid-19 Cases: https://coronavirus.jhu.edu/map.html", bot_number, phone_no)
+        time.sleep(1)
+        send_message("Covid-19 Updates: https://www.nytimes.com/news-event/coronavirus?name=styln-coronavirus&region=TOP_BANNER&variant=1_Show&block=storyline_menu_recirc&action=click&pgtype=Article&impression_id=b0067c50-e244-11ea-8a15-e95204810ae6", bot_number, phone_no)
+
+    elif len(list(msg)) == 10 or len(list(msg)) == 11 or len(list(msg)) == 12:
+        print(msg)
+        if len(list(msg)) == 10:
+            number = "whatsapp" + "+1" + str(msg)
+            send_message("Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
+                         "Your friend, whose number is {} share me with you.".format(number), bot_number, number)
+
+        elif len(list(msg)) == 11:
+            number = "whatsapp" + "+" + str(msg)
+            send_message(
+                "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
+                "Your friend, whose number is {} share me with you.".format(number), bot_number, number)
+
+        elif len(list(msg)) == 12:
+            print(int(msg))
+            send_message(
+                "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
+                "Your friend, whose number is {} share me with you.".format(msg), bot_number, int(msg))
+
+        else:
+            send_message("Check if you formatted the number correct. There seems to be a mistake.", bot_number, phone_no)
+
+    elif msg == "Puns123**":
+        pun = random.choice(puns)
+        send_message(pun["pun"], bot_number, phone_no)
+        time.sleep(2)
+        send_message(pun["punchline"], bot_number, phone_no)
+
     else:
         send_message("I don't understand. Here is the menu again: ", bot_number, phone_no)
         responded = send_menu(bot_number, phone_no)
 
     return "ok"
 
-'''
-def download_csv():
-    url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/08-15-2020.csv"
-    print("download start!")
-    filename, headers = urllib.request.urlretrieve(url, filename="/Users/martinmashalov/Documents/Python/twilioTest2/CovidData.csv")
-    print("download complete!")
-    print("download file location: ", filename)'''
-
 def send_menu(bot_num, phone_no):
-    keyword = "Type 'A' ->  Get Info on Cases\n" \
+    keyword = "Menu: \n" \
+              "Type 'A' ->  Get Info on Cases\n" \
               "Type 'B' ->  Debunk those myths!\n" \
-              "Type 'C' ->  Finds the nearest Covid-19 testing centers"
+              "Type 'C' ->  Finds the nearest Covid-19 testing centers\n" \
+              "Type 'D' ->  Share this bot!\n" \
+              "Type 'E' ->  Donate for Covid-19\n" \
+              "Type 'F' ->  More Information about the virus"
+
     send_message(keyword, bot_num, phone_no)
     return True
 
