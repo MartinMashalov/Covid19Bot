@@ -15,7 +15,7 @@ if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unveri
 
 app = Flask(__name__)
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
-auth_token = '0564dd82c87dedf2c130e8db7f5244a8'
+auth_token = '8816dfab39966ecfce99deb9a111a320'
 client = Client(account_sid, auth_token)
 bot_number = "+14155238886"
 
@@ -28,6 +28,7 @@ myths = [
     'Ordering products from overseas will not make you or your family sick from Covid-19',
     'Masks absolutely help stop the disease. Be mindful when going out and meeting with others please'
 ]
+bye_statements = ["bye", 'leave', 'exit', 'quit', 'goodbye']
 
 @app.route("/")
 def hello():
@@ -42,8 +43,8 @@ def sms_reply():
     if msg.lower() == "Hi".lower() or msg.lower() == "hello".lower():
         send_message("Hi There! I'm CovidBot. I'm here to help you navigate your way through this pandemic safely.", bot_number, phone_no)
         time.sleep(0.8)
-        responded = send_menu(bot_number, phone_no)
-        time.sleep(0.9)
+        #responded = send_menu(bot_number, phone_no)
+        #time.sleep(0.9)
         send_message("Your zip code is needed for some of the main features. Please supply your zip code: ", bot_number, phone_no)
 
     elif msg.lower() == "joke".lower():
@@ -85,7 +86,8 @@ def sms_reply():
             del user_zips[phone_no]
             user_zips[phone_no] = [int(msg)]
         send_message("Got it!", bot_number, phone_no)
-        print(user_zips)
+        time.sleep(0.8)
+        responded = send_menu(bot_number, phone_no)
 
     #myths debunked (OPERATIONAL)
     elif msg.lower() == 'B'.lower():
@@ -119,7 +121,7 @@ def sms_reply():
         send_message("Type the number of the friend you want to share with: ", bot_number, phone_no)
 
     elif msg.lower() == 'E'.lower():
-        send_message("You help is needed!", bot_number, phone_no)
+        send_message("Your help is needed!", bot_number, phone_no)
         time.sleep(0.5)
         send_message("https://www.unicefusa.org/?form=HealthEmergency&utm_content=corona3responsive_E2001&ms=cpc_dig_2020_Emergencies_20200402_google_corona3responsive_delve_E2001&initialms=cpc_dig_2020_Emergencies_20200402_google_corona3responsive_delve_E2001&gclid=CjwKCAjwm_P5BRAhEiwAwRzSOyezPDpOahj2yFSuxeaXR9PKRUTNn9vkwjfOJIznTwkXF-0-HuJuFBoCdzkQAvD_BwE", bot_number, phone_no)
 
@@ -129,23 +131,22 @@ def sms_reply():
         send_message("Covid-19 Updates: https://www.nytimes.com/news-event/coronavirus?name=styln-coronavirus&region=TOP_BANNER&variant=1_Show&block=storyline_menu_recirc&action=click&pgtype=Article&impression_id=b0067c50-e244-11ea-8a15-e95204810ae6", bot_number, phone_no)
 
     elif len(list(msg)) == 10 or len(list(msg)) == 11 or len(list(msg)) == 12:
-        print(msg)
         if len(list(msg)) == 10:
-            number = "whatsapp" + "+1" + str(msg)
+            number = "+1" + str(msg)
             send_message("Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
                          "Your friend, whose number is {} share me with you.".format(number), bot_number, number)
 
         elif len(list(msg)) == 11:
-            number = "whatsapp" + "+" + str(msg)
+            number = "+" + str(msg)
             send_message(
                 "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
                 "Your friend, whose number is {} share me with you.".format(number), bot_number, number)
 
         elif len(list(msg)) == 12:
-            print(int(msg))
+            print(msg)
             send_message(
                 "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
-                "Your friend, whose number is {} share me with you.".format(msg), bot_number, int(msg))
+                "Your friend, whose number is {} share me with you. Say Hi to activate".format(msg), bot_number, msg)
 
         else:
             send_message("Check if you formatted the number correct. There seems to be a mistake.", bot_number, phone_no)
@@ -155,6 +156,9 @@ def sms_reply():
         send_message(pun["pun"], bot_number, phone_no)
         time.sleep(2)
         send_message(pun["punchline"], bot_number, phone_no)
+
+    elif msg.lower() in bye_statements:
+        send_message("Goodbye", bot_number, phone_no)
 
     else:
         send_message("I don't understand. Here is the menu again: ", bot_number, phone_no)
@@ -166,7 +170,7 @@ def send_menu(bot_num, phone_no):
     keyword = "Menu: \n" \
               "Type 'A' ->  Get Info on Cases\n" \
               "Type 'B' ->  Debunk those myths!\n" \
-              "Type 'C' ->  Finds the nearest Covid-19 testing centers\n" \
+              "Type 'C' ->  Finds your nearest test sites\n" \
               "Type 'D' ->  Share this bot!\n" \
               "Type 'E' ->  Donate for Covid-19\n" \
               "Type 'F' ->  More Information about the virus"
