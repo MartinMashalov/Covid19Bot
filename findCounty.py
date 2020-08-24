@@ -10,9 +10,8 @@ def find_county_by_zip_code(zip_code):
             counties.append(row['County Name'])
 
     if len(counties) == 1:
-        return counties[0]
+        return 1, counties[0]
+    elif len(counties) > 1:
+        return 2, counties
     else:
-        return "No"
-
-
-print(find_county_by_zip_code(10529))
+        return 0, "No"

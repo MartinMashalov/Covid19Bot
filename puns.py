@@ -1,0 +1,265 @@
+puns = [{
+    "pun": "Q: How many programmers does it take to change a light bulb?",
+    "punchline": "A: None. It's a hardware problem!"
+  },
+  {
+    "pun": "Q: What does a proud computer call its little son?",
+    "punchline": "A: A microchip off the old block!"
+  },
+  {
+    "pun": "Q: What is another name for a computer virus?",
+    "punchline": "A: A terminal illness!"
+  },
+  {
+    "pun": "Q: Why did the computer spy quit?",
+    "punchline": "A: They couldn’t hack it anymore!"
+  },
+  {
+    "pun": "Q: What did the motherboard say to the new software?",
+    "punchline": "A: I'll show you who's Dos!"
+  },
+  {
+    "pun": "Q: What does a floppy disk do when it needs a break?",
+    "punchline": "A: It goes for a C: drive!"
+  },
+  {
+    "pun": "Q: Why was the computer geek disappointed by the zoo?",
+    "punchline": "A: They couldn't find any RAM!"
+  },
+  {
+    "pun": "Q: Which way did the computer programmer go?",
+    "punchline": "A: They went data way!"
+  },
+  {
+    "pun": "Q: What do you get when you cross a computer with a hamburger?",
+    "punchline": "A: A Big Mac!"
+  },
+  {
+    "pun": "Q: How do you find a spider on the internet?",
+    "punchline": "A: Check out its web site!"
+  },
+  {
+    "pun": "Q: How did the computer catch a cold?",
+    "punchline": "A: Someone opened too many Windows!"
+  },
+  {
+    "pun": "Q: Why don't Vikings like to send emails?",
+    "punchline": "A: They prefer to use Norse code!"
+  },
+  {
+    "pun": "Q: What do you say when a JavaScript interview went bad?",
+    "punchline": "A: Don't call us, we'll callback you. We promise!"
+  },
+  {
+    "pun": "Q: Why did the computer programmer drown?",
+    "punchline": "A: They couldn't figure out whether to float left or right!"
+  },
+  {
+    "pun": "Q: How do you comfort a JavaScript bug?",
+    "punchline": "A: You console it!"
+  },
+  {
+    "pun": "Q: Why did the programmer quit their job?",
+    "punchline": "A: Because they didn't get arrays!"
+  },
+  {
+    "pun": "Q: What do computers and air conditioners have in common?",
+    "punchline": "A: They both become useless when you open Windows!"
+  },
+  {
+    "pun": "Q: Why do Java programmers wear glasses?",
+    "punchline": "A: They cannot C#!"
+  },
+  {
+    "pun": "Q: Do you know the band 1023 megabytes?",
+    "punchline": "A: They haven't had a gig yet!"
+  },
+  {
+    "pun": "Q: Why was the database admin kicked out of the bar?",
+    "punchline": "A: They kept joining the tables."
+  },
+  {
+    "pun": "Q: Why did the JavaScript developer lose their job?",
+    "punchline": "A: They couldn't keep their Promises!"
+  },
+  {
+    "pun": "Q: Did you hear about the monkeys who shared an Amazon account?",
+    "punchline": "A: They were Prime mates!"
+  },
+  {
+    "pun": "Q: What are computers' favorite snacks?",
+    "punchline": "A: Microchips, phish sticks, and cookies. But just a few bytes of each!"
+  },
+  {
+    "pun": "Q: Why was the network administrator late to work?",
+    "punchline": "A: There was lots of traffic congestion and even a collision. Everything was backed up. It was a hard drive!"
+  },
+  {
+    "pun": "Q: What wedding gift should you buy for a Windows administrator?",
+    "punchline": "A: I don't know. Perhaps you should check the registry for clues!"
+  },
+  {
+    "pun": "Q: Where's the best place to hide a body?",
+    "punchline": "A: Page two of Google!"
+  },
+  {
+    "pun": "Q: What is the biggest lie in the entire universe?",
+    "punchline": "A: 'I have read and agree to the Terms & Conditions.'"
+  },
+  {
+    "pun": "Q: What do computers do on a beach vacation?",
+    "punchline": "A: Surf the net!"
+  },
+  {
+    "pun": "Q: Why are people afraid of computers?",
+    "punchline": "A: They byte!"
+  },
+  {
+    "pun": "Q: Why do people on Twitter tell me I'm always confused?",
+    "punchline": "A: Because I don't follow!"
+  },
+  {
+    "pun": "Q: How does a computer get drunk?",
+    "punchline": "A: It takes screenshots!"
+  },
+  {
+    "pun": "Q: Why do app developer's have such high insurance rates?",
+    "punchline": "A: They're always crashing!"
+  },
+  {
+    "pun": "Q: Why doesn't the developer use Git?",
+    "punchline": "A: Because they're afraid to commit!"
+  },
+  {
+    "pun": "Q: Why does a front end developer eat alone?",
+    "punchline": "A: Because they don't know how to join the tables!"
+  },
+  {
+    "pun": "Q: Did you hear about the Linux sysadmin who won Strictly?",
+    "punchline": "A: They really came out of their shell!"
+  },
+  {
+    "pun": "Q: Why are Java programmers front yards so untidy?",
+    "punchline": "A: Because they are always waiting on garbage collection!"
+  },
+  {
+    "pun": "Q: What do you call a Rails developer?",
+    "punchline": "A: A conductor!"
+  },
+  {
+    "pun": "Q: Where do naughty disk drives get sent?",
+    "punchline": "A: Boot camp!"
+  },
+  {
+    "pun": "Q: What do you call it when you have your mom's mom on speed dial?",
+    "punchline": "A: Instagram!"
+  },
+  {
+    "pun": "Q: Why did the functions stop calling each other?",
+    "punchline": "A: Because they had constant arguments!"
+  },
+  {
+    "pun": "Q: What's the most cutting edge language?",
+    "punchline": "A: C#!"
+  },
+  {
+    "pun": "Q: Why couldn't the programmer dance to the song?",
+    "punchline": "A: Because they didn't get the algo-rhythm!"
+  },
+  {
+    "pun": "Q: Why do universities hate Java programmers?",
+    "punchline": "A: They're always starting public classes!"
+  },
+  {
+    "pun": "Q: Why are programmers popular on the street?",
+    "punchline": "A: They'll write scripts for anything at the right price!"
+  },
+  {
+    "pun": "Q: Why is everyone who works at the keyboard factory so rich?",
+    "punchline": "A: They put in a lot of shifts!"
+  },
+  {
+    "pun": "Q: Why don't programmers like nature?",
+    "punchline": "A: Too many bugs!"
+  },
+  {
+    "pun": "Q: How many bits of bait does a programmer need to go fishing?",
+    "punchline": "A: At least 8, or else the fish won't byte!"
+  },
+  {
+    "pun": "Q: Why were the Javascript plumbers delayed?",
+    "punchline": "A: Because they had to await async!"
+  },
+  {
+    "pun": "Q: Why was the IT engineer in the hospital?",
+    "punchline": "A: They touched the firewall!"
+  },
+  {
+    "pun": "Q: How do you generate a random string?",
+    "punchline": "A: Put a Windows user in front of vim and tell them to exit!"
+  },
+  {
+    "pun": "Q: How many testers does it take to change a light bulb?",
+    "punchline": "A: None. Testers do not fix problems; they just report them!"
+  },
+  {
+    "pun": "Q: How many programmers does it take to change a light bulb?",
+    "punchline": "A: What's the problem? The bulb at my desk works just fine!"
+  },
+  {
+    "pun": "Q: Why did the programmer stop using Python?",
+    "punchline": "A: Because they are scared of snakes!"
+  },
+  {
+    "pun": "Q: Why did the PowerPoint Presentation cross the road?",
+    "punchline": "A: To get to the other slide!"
+  },
+  {
+    "pun": "Q: What sits on your shoulder and says 'Pieces of 7! Pieces of 7!'?",
+    "punchline": "A: A Parroty Error!"
+  },
+  {
+    "pun": "Q: Why are database admins afraid of having dinner?",
+    "punchline": "A: Because the table is cleared!"
+  },
+  {
+    "pun": "Q: Who is a computer's favorite singer?",
+    "punchline": "A: A Dell!"
+  },
+  {
+    "pun": "Q: Why did the integer never get any radio play?",
+    "punchline": "A: Because it was unsigned!"
+  },
+  {
+    "pun": "Q: How does the JavaScript function travel?",
+    "punchline": "A: It fly's first-class!"
+  },
+  {
+    "pun": "Q: What is a computer's favorite instrument?",
+    "punchline": "A: The keyboard!"
+  },
+  {
+    "pun": "Q: What does the hacker say to their mom when they're hacking people?",
+    "punchline": "A: Gone Phishing!"
+  },
+  {
+    "pun": "Q: What do Linux users wear?",
+    "punchline": "A: Tux-edos!"
+  },
+  {
+    "pun": "Q: What do you call a program whose file you can't find?",
+    "punchline": "A: Soft-where!"
+  },
+  {
+    "pun": "Q: What grade did the programmer get on their test?",
+    "punchline": "A: C++!"
+  },
+  {
+    "pun": "Q: What made the technician win the golf tournament?",
+    "punchline": "A: They had a hard-drive!"
+  },
+  {
+    "pun": "Q: Why do programmers take so long in the shower?",
+    "punchline": "A: The instructions on the shampoo are: lather, rinse, repeat!"
+  }
+]

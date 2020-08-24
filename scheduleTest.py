@@ -8,17 +8,14 @@ if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unveri
 
 def download():
     url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/08-15-2020.csv"
-    #print("download start!")
     filename, headers = urllib.request.urlretrieve(url, filename="/Users/martinmashalov/Documents/Python/twilioTest2/CovidData.csv")
-    #print("download complete!")
-    #print("download file location: ", filename)
 
 #test function to test out schedule
 def printTest():
     print("this is from the test print func")
+#########################################
 
 schedule.every(1).day.do(download)
-
 while True:
     schedule.run_pending()
     time.sleep(1)
