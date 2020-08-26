@@ -73,8 +73,8 @@ def sms_reply():
                              "The incidence rate (number of new cases) is {}\n"
                              ""
                              "The mortality rate lies at {}.".format(data[-1], data[0], data[1], data[2], data[3], round(data[4], 2), str(round(data[5], 2)) + "%"), bot_number, phone_no)
-        #else:
-         #   send_message("Supply a zip code:", bot_number, phone_no)
+        else:
+            send_message("Supply a zip code:", bot_number, phone_no)
 
     #store zip_code (OPERATIONAL)
     elif len(list(msg)) == 5:
