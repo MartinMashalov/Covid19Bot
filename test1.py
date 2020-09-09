@@ -8,11 +8,19 @@ client = Client(account_sid, auth_token)
 def send_message(message_, from_, to):
     print('whatsappFROM:' + from_)
     print('whatsappTO:' + to)
-    message = client.messages \
-        .create(
-        body=message_,
-        from_="whatsapp:" + from_,
-        to=to
-    )
-
-#send_message("Hi there", "+14155238886", "whatsapp:+19142822807")
+    if 'w' in list(to):
+        message = client.messages \
+            .create(
+            body=message_,
+            from_="whatsapp:" + from_,
+            to=to
+        )
+    else:
+        message = client.messages \
+            .create(
+            body=message_,
+            from_="whatsapp:" + from_,
+            to="whatsapp:" + to
+        )
+        
+#send_message("Hi there", "+14155238886", 'whatsapp:+19142822807")
