@@ -2,7 +2,6 @@ from flask import Flask, request
 from twilio.rest import Client
 from test1 import send_message
 import time
-from twilio.jwt.access_token import AccessToken
 import findCounty as fc
 from nearestCentersDictionary import nearest_centers
 from makeMessage import formulate_message
@@ -14,9 +13,9 @@ if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unveri
     ssl._create_default_https_context = ssl._create_unverified_context
 
 
-auth_token = AccessToken('AC0d79e56293d4494c36eee4f48a59ff8e', 'SKeb5a25313bb48bd91b84eedbe6834520', 'bsamiAWrhwdHLCYpPNiy6Ch2t9WT1gAT', identity='PythonCovidBot')
+#auth_token = AccessToken('AC0d79e56293d4494c36eee4f48a59ff8e', 'SKeb5a25313bb48bd91b84eedbe6834520', 'bsamiAWrhwdHLCYpPNiy6Ch2t9WT1gAT', identity='PythonCovidBot')
 
-
+auth_token = "add1554bab0e843fabc0cf9bfcf4c99c"
 app = Flask(__name__)
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
 client = Client(account_sid, auth_token)
