@@ -3,7 +3,6 @@ from app import auth_token
 
 
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
-#auth_token = 'e28b70572daa7f80fe2bccb3b7357432'
 client = Client(account_sid, auth_token)
 
 
