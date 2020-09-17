@@ -1,10 +1,9 @@
 from twilio.rest import Client
-from app import auth_token
 
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
-#auth_token = 'e28b70572daa7f80fe2bccb3b7357432'
-client = Client(account_sid, auth_token)
+auth_token = '15caae692cc9007c162f8d0c7f77e04d'
 
+client = Client(account_sid, auth_token)
 
 def send_message(message_, from_, to):
     print('whatsappFROM: ' + from_)
@@ -31,6 +30,3 @@ def send_message(message_, from_, to):
         from_="whatsapp:" + from_,
         to=to
     )'''
-
-
-#send_message("Hi there", "+14155238886", 'whatsapp:+19142822807")
