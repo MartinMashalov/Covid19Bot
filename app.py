@@ -9,15 +9,16 @@ from test import cases_data
 import os, ssl
 import random
 from puns import puns
+from twilio.jwt.access_token import AccessToken
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
 
-
 #auth_token = AccessToken('AC0d79e56293d4494c36eee4f48a59ff8e', 'SKeb5a25313bb48bd91b84eedbe6834520', 'bsamiAWrhwdHLCYpPNiy6Ch2t9WT1gAT', identity='PythonCovidBot')
 
-auth_token = "add1554bab0e843fabc0cf9bfcf4c99c"
+
 app = Flask(__name__)
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
+auth_token = '15caae692cc9007c162f8d0c7f77e04d'
 client = Client(account_sid, auth_token)
 bot_number = "+14155238886"
 
@@ -56,11 +57,12 @@ def sms_reply():
     elif msg == 'A':
         if phone_no in user_zips.keys():
             zip = user_zips[phone_no][0]
+            print(zip)
             county = fc.find_county_by_zip_code(zip)
             if county[1] == "No":
                send_message("Enter a valid zip code. Otherwise, I'm sorry, I cannot retrieve data for you :(", bot_number, phone_no)
             elif county[0] == 2:
-                send_message("Which county are you located in: {}".format(county[1]), bot_number, phone_no)
+                send_message("Which county are you located in: {}. Type the numerical index of the county you are in starting from 1.".format(county[1]), bot_number, phone_no)
             # length 1, no need for more user input
             else:
                 #county = fc.find_county_by_zip_code(zip)
@@ -149,7 +151,6 @@ def sms_reply():
             send_message(
                 "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
                 "Your friend, whose number is {} share me with you. Say Hi to activate".format(msg), bot_number, msg)
-
         else:
             send_message("Check if you formatted the number correct. There seems to be a mistake.", bot_number, phone_no)
 
