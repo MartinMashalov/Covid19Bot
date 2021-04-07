@@ -139,13 +139,13 @@ def sms_reply():
         if len(list(msg)) == 10:
             number = "+1" + str(msg)
             send_message("Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
-                         "Your friend, whose number is {} share me with you.".format(number), bot_number, number)
+                         "Your friend, whose number is {}, shared me with you.".format(number), bot_number, number)
 
         elif len(list(msg)) == 11:
             number = "+" + str(msg)
             send_message(
                 "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
-                "Your friend, whose number is {} share me with you.".format(number), bot_number, number)
+                "Your friend, whose number is {}, shared me with you.".format(number), bot_number, number)
 
         elif len(list(msg)) == 12:
             print(msg)
