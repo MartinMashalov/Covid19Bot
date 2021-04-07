@@ -1,0 +1,70 @@
+[{"id": 1,"vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 693-6455"}, "hours": "Monday-Friday: 9 AM to 9 PM, Weekends: 9 AM to 6 PM", "address": "871 Saw Mill River Rd, Ardsley, NY 10502"},
+{"id": 2, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 840-5027"}, "hours": "Closed on Weekends. Monday-Friday: 10 AM to 6 PM", "address": "35 Valley Ave Elmsford, NY, 10523"},
+{"id": 3, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 793-3933"}, "hours": "Everyday: 12 AM to 12 AM", "address": "2290 Central Park Ave Yonkers, NY 10710"},
+{"id": 4, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 969-7944"}, "hours": "Everyday: 12 AM to 12 AM", "address": "1230 Nepperhan Ave Yonkers, NY 10703"},
+{"id": 5, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(845) 792-3006"}, "hours": "Everyday: 9 AM to 9 PM", "address": "81 Ny-303 Tappan, NY 10983"},
+{"id": 6, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 725-8890"}, "hours": "Weekdays: 9 AM to 9 PM, Weekends: 9 AM to 5 PM", "address": "196 E Hartsdale Ave Hartsdale, NY 10530"},
+{"id": 7, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(201) 784-0308"}, "hours": "Weekdays: 8 AM to 9 PM, Saturday: 9 AM to 6 PM, Sunday: 9 AM to 5 PM", "address": "269a Livingston St Northvale, NJ 07647"},
+{"id": 8, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 592-0023"}, "hours": "Weekdays: 9 AM to 7 PM, Weekends: 9 AM to 6 PM", "address": "333 Saw Mill River Rd Elmsford, NY 10523"},
+{"id": 9, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 725-1827"}, "hours": "Weekdays: 9 AM to 6 PM, Saturday: 9 AM to 3 PM, Sunday: Closed", "address": "199 Brook St Scarsdale, NY 10583"},
+{"id": 10, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(833) 697-4829"}, "hours": "Weekdays: 9 AM to 6 PM, Saturday: 9 AM to 3 PM, Sunday: Closed", "address": "199 Brook St Scarsdale, NY 10583"},
+{"id": 11, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 287-2410"}, "hours": "Weekdays: 9 AM to 5:30 PM, Saturday: 11 AM to 4 PM, Sunday: Closed", "address": "44 E Post Rd, White Plains, NY 10601"},
+{"id": 12, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 337-5300"}, "hours": "Everyday: 9 AM to 6 PM", "address": "375 White Plains Rd, Eastchester, NY 10709"},
+{"id": 13, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "914-771-5853"}, "hours": "Everyday: 8 AM to 10 PM", "address": "370 White Plains Rd, Eastchester, NY 10709"},
+{"id": 14, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 949-0961"}, "hours": "Weekdays: 09:00 AM to 08:00 PM, Weekends: 10:00 AM to 06:00 ", "address": "24 Mamaroneck Ave, White Plains, NY 10601"},
+{"id": 15, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 287-7650"}, "hours": "Everyday: 24 hours/day", "address": "325 Mamaroneck Ave, White Plains, NY 10605"},
+{"id": 16, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(845) 358-1589"}, "hours": "Everyday: 7 AM to 11:59 PM", "address": "16 Ny-59, Nyack, NY 10960"},
+{"id": 17, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 997-1530"}, "hours": "Weekdays: 9:00A M to 7:00 PM, Weekends: 9:00 AM to 5:00 PM", "address": "154 Westchester Ave, White Plains, NY 10601"},
+{"id": 18, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 682-0743"}, "hours": "Weekdays: 9:00A M to 7:00 PM, Weekends: 9:00 AM to 5:00 PM", "address": "670 N Broadway, White Plains, NY 10603"},
+{"id": 19, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 457-3351"}, "hours": "Call for hours", "address": "66 Main St, Yonkers, NY 10701"},
+{"id": 20, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 423-5964"}, "hours": "Weekdays: 8 AM to 9 PM, Weekends: 9 AM to 6 PM", "address": "585 Yonkers Ave, Yonkers, NY 10704"},
+{"id": 21, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 378-9314"}, "hours": "Weekdays: 9 AM to 7 PM, Weekends: 9 AM to 5 PM", "address": "111 Vredenburgh Ave, Yonkers, NY 10704"},
+{"id": 22, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 664-6019"}, "hours": "Weekdays: 8 AM to 10 PM, Weekends: 8 AM to 8 PM", "address": "24 W Grand St, Mt Vernon, NY 10552"},
+{"id": 23, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 265-7460"}, "hours": "Everyday: 8 AM to 10 PM", "address": "6 Mclean Ave, Yonkers, NY 10705"},
+{"id": 24, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 803-0290"}, "hours": "Everyday: 7 AM to 11:59 PM", "address": "1046 Yonkers Ave, Yonkers, NY 10704"},
+{"id": 25, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 549-8288"}, "hours": "Weekdays: 9 AM to 7 PM, Saturday: 10 AM to 5 PM, Sunday: Closed", "address": "5700 Mosholu Ave, The Bronx, NY 10471"},
+{"id": 26, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 963-3500"}, "hours": "Weekdays: 7 AM to 9 PM, Weekends: 9 AM to 6 PM", "address": "678 Mclean Ave, Yonkers, NY 10704"},
+{"id": 27, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 632-7148"}, "hours": "Weekdays: 9 AM to 7 PM, Weekends: 9 AM to 5 PM", "address": "2425 Palmer Ave, New Rochelle, NY 10801"},
+{"id": 28, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 664-9289"}, "hours": "Weekdays: 8 AM to 9 PM, Saturday: 9 AM to 6 PM, Sunday: 10 AM to 6 PM", "address": "211 E Sandford Blvd, Mt Vernon, NY 10550"},
+{"id": 29, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(201) 385-8883"}, "hours": "Weekdays: 9 AM to 8 PM, Saturday: 9 AM to 6 PM, Sunday: 10 AM to 5 PM", "address": "50 W Madison Ave, Dumont, NJ 07628"},
+{"id": 30, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 365-7099"}, "hours": "Weekdays: 8:30 AM to 7:30 PM, Saturday: 9:30 AM to 4:30 PM, Sunday: Closed", "address": "175 Memorial Hwy Suite 1-14, New Rochelle, NY 10801"},
+{"id": 31, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 747-0239"}, "hours": "Everyday: 8 AM to 10 PM", "address": "35 Kensico Rd, Thornwood, NY 10594"},
+{"id": 32, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 833-3001"}, "hours": "Weekdays: 8 AM to 9 PM, Weekends: 8 AM to 6 PM", "address": "1310 Boston Post Road Ferndale Shopping Center, Larchmont, NY 10538"},
+{"id": 33, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(718) 325-3100"}, "hours": "Everyday: 7 AM to 11 PM", "address": "4232 Baychester Ave, The Bronx, NY 10466"},
+{"id": 34, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 762-1616"}, "hours": "Weekdays: 8 AM to 9 PM, Saturday: 9 AM to 6 PM, Sunday: 10 AM to 6 PM", "address": "202 S Highland Ave, Ossining, NY 10562"},
+{"id": 35, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(914) 834-0954"}, "hours": "Weekdays: 7 AM to 10 PM, Weekends: 8 AM to 10 PM", "address": "1333 W Boston Post Rd, Larchmont, NY 10538"},
+{"id": 36, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 769-0558"}, "hours": "Weekdays: 8 AM to 9 PM, Weekends: 9 AM to 6 PM", "address": "1024 Broadway, Thornwood, NY 10594"},
+{"id": 37, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "In Stock", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 405-1394"}, "hours": "Weekdays: 8 AM to 9 PM, Sunday: 9 AM to 5 PM, Saturday: 9 AM to 6 PM", "address": "4159 White Plains Rd, The Bronx, NY 10466"},
+{"id": 38, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "In Stock", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 636-2225"}, "hours": "Weekdays: 9 AM to 6 PM, Sunday: Closed, Saturday: 9 AM to 6 PM", "address": "551 Main St, New Rochelle, NY 10801"},
+{"id": 39, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(845) 624-0659"}, "hours": "Weekdays: 9 AM to 8 PM, Weekends: 9 AM to 5 PM", "address": "32 S Middletown Rd, Nanuet, NY 10954"},
+{"id": 40, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(914) 235-1000"}, "hours": "Call for hours", "address": "761 Main St, New Rochelle, NY 10805"},
+{"id": 41, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "In Stock", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 324-3668"}, "hours": "Weekdays: 8 AM to 9 PM, Sunday: 9 AM to 5 PM, Saturday: 9 AM to 8 PM", "address": "1179 E 233rd St, The Bronx, NY 10466"},
+{"id": 42, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(201) 408-1374"}, "hours": "Everyday: 8 AM to 10 PM", "address": "20 W Hudson Ave, Englewood, NJ 07631"},
+{"id": 43, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(201) 384-2789"}, "hours": "Weekdays: 9 AM to 9 PM, Saturday: 9 AM to 6 PM, Sunday: 10 AM to 6 PM", "address": "10 Portland Ave, Bergenfield, NJ 07621"},
+{"id": 44, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(718) 652-7150"}, "hours": "Everyday: 7 AM to 11 PM", "address": "3901 White Plains Rd, The Bronx, NY 10466"},
+{"id": 45, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 581-0840"}, "hours": "Weekdays: 9 AM to 9 PM, Saturday: 9 AM to 8 PM, Sunday: 9 AM to 5 PM", "address": "5825 Broadway, The Bronx, NY 10463"},
+{"id": 46, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 395-3509"}, "hours": "Call for hours", "address": "3547 Johnson Ave, The Bronx, NY 10463"},
+{"id": 47, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 548-8600"}, "hours": "Everyday: 7 AM to 11 PM", "address": "541 W 235th St, The Bronx, NY 10463"},
+{"id": 48, "vaccineBrands": {"Pfizer": "In Stock", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(201) 894-3000"}, "hours": "Call for hours", "address": "350 Engle St, Englewood, NJ 07631"},
+{"id": 49, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "Call to Confirm"}, "contact": {"phone": "(718) 543-6868"}, "hours": "Weekdays: 9 AM to 7 PM, Saturday: 9 AM to 5 PM, Sunday: 10 AM to 3 PM", "address": "558 W 235th St, The Bronx, NY 10463"},
+{"id": 50, "vaccineBrands": {"Pfizer": "Call to Confirm", "Johnson & Johnson": "Call to Confirm", "Moderna": "In Stock"}, "contact": {"phone": "(718) 231-2609"}, "hours": "Everyday: 7 AM to 11 PM", "address": "3480 Jerome Ave, The Bronx, NY 10467"}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

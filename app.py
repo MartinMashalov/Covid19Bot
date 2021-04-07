@@ -5,20 +5,21 @@ import time
 import findCounty as fc
 from nearestCentersDictionary import nearest_centers
 from makeMessage import formulate_message
+from makeMessage import formulate_message_vaccine
 from test import cases_data
 import os, ssl
 import random
 from puns import puns
-from twilio.jwt.access_token import AccessToken
+from vaccine_centers_nearest import refined_vaccine_sites
 if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None)):
     ssl._create_default_https_context = ssl._create_unverified_context
 
+
 #auth_token = AccessToken('AC0d79e56293d4494c36eee4f48a59ff8e', 'SKeb5a25313bb48bd91b84eedbe6834520', 'bsamiAWrhwdHLCYpPNiy6Ch2t9WT1gAT', identity='PythonCovidBot')
 
-
+auth_token = "15caae692cc9007c162f8d0c7f77e04d"
 app = Flask(__name__)
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
-auth_token = '15caae692cc9007c162f8d0c7f77e04d'
 client = Client(account_sid, auth_token)
 bot_number = "+14155238886"
 
@@ -40,6 +41,7 @@ def hello():
 @app.route("/sms", methods=['POST'])
 def sms_reply():
     msg = request.form.get('Body')
+    print(msg)
     phone_no = request.form.get('From')
     responded = False
 
@@ -57,12 +59,11 @@ def sms_reply():
     elif msg == 'A':
         if phone_no in user_zips.keys():
             zip = user_zips[phone_no][0]
-            print(zip)
             county = fc.find_county_by_zip_code(zip)
             if county[1] == "No":
                send_message("Enter a valid zip code. Otherwise, I'm sorry, I cannot retrieve data for you :(", bot_number, phone_no)
             elif county[0] == 2:
-                send_message("Which county are you located in: {}. Type the numerical index of the county you are in starting from 1.".format(county[1]), bot_number, phone_no)
+                send_message("Which county are you located in: {}".format(county[1]), bot_number, phone_no)
             # length 1, no need for more user input
             else:
                 #county = fc.find_county_by_zip_code(zip)
@@ -110,7 +111,7 @@ def sms_reply():
             fourth_test_center = formulate_message(centers[3][1])
             fifth_test_center = formulate_message(centers[4][1])
 
-            print(first_test_center, fourth_test_center)
+            #print(first_test_center, fourth_test_center)
             send_message(first_test_center + "\n" + " " + "\n" + second_test_center + "\n" + " " + "\n" + third_test_center + "\n" + " " + "\n" + fourth_test_center + "\n" + " " + "\n" + fifth_test_center, bot_number, phone_no)
             '''
             send_message(formulate_message(centers[1][1]), bot_number, phone_no)
@@ -151,6 +152,7 @@ def sms_reply():
             send_message(
                 "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
                 "Your friend, whose number is {} share me with you. Say Hi to activate".format(msg), bot_number, msg)
+
         else:
             send_message("Check if you formatted the number correct. There seems to be a mistake.", bot_number, phone_no)
 
@@ -162,6 +164,34 @@ def sms_reply():
 
     elif msg.lower() in bye_statements:
         send_message("Goodbye", bot_number, phone_no)
+
+
+    #vaccine centers option addition
+    elif msg.lower() == 'V'.lower():
+        if phone_no in user_zips.keys():
+            search = str(user_zips[phone_no][0])
+
+            if search not in refined_vaccine_sites:
+                send_message("Please provide a zip code and re-enter the letter you typed:  ", bot_number, phone_no)
+            else:
+                print(search)
+                centers = refined_vaccine_sites[search]
+                print(centers)
+
+
+                first_test_center = formulate_message_vaccine(centers[0][1])
+                second_test_center = formulate_message_vaccine(centers[1][1])
+                third_test_center = formulate_message_vaccine(centers[2][1])
+                #fourth_test_center = formulate_message_vaccine(centers[3][1])
+                #fifth_test_center = formulate_message_vaccine(centers[4][1])
+
+
+                send_message(
+                    first_test_center + "\n" + " " + "\n" + second_test_center + "\n" + " " + "\n" + third_test_center,
+                    bot_number, phone_no)
+
+        else:
+            send_message("Please provide a zip code and re-enter the letter you typed:  ", bot_number, phone_no)
 
     else:
         send_message("I don't understand. Here is the menu again: ", bot_number, phone_no)
@@ -176,7 +206,8 @@ def send_menu(bot_num, phone_no):
               "Type 'C' ->  Finds your nearest test sites\n" \
               "Type 'D' ->  Share this bot!\n" \
               "Type 'E' ->  Donate for Covid-19\n" \
-              "Type 'F' ->  More Information about the virus"
+              "Type 'F' ->  More Information about the virus\n" \
+              "Type 'V' ->  Find your nearest vaccination site!"
 
     send_message(keyword, bot_num, phone_no)
     return True
