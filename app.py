@@ -17,7 +17,7 @@ if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unveri
 
 #auth_token = AccessToken('AC0d79e56293d4494c36eee4f48a59ff8e', 'SKeb5a25313bb48bd91b84eedbe6834520', 'bsamiAWrhwdHLCYpPNiy6Ch2t9WT1gAT', identity='PythonCovidBot')
 
-auth_token = "15caae692cc9007c162f8d0c7f77e04d"
+auth_token = "b9d35010dbcc4e8747238c8a7fa64222"
 app = Flask(__name__)
 account_sid = 'AC0d79e56293d4494c36eee4f48a59ff8e'
 client = Client(account_sid, auth_token)
