@@ -151,7 +151,7 @@ def sms_reply():
             print(msg)
             send_message(
                 "Hi There, I am CovidBot! I am a chatbot that helps guide you through the pandemic with truthful and insightful info.\n"
-                "Your friend, whose number is {} share me with you. Say Hi to activate".format(msg), bot_number, msg)
+                "Your friend, whose number is {}, shared me with you. Say Hi to activate".format(msg), bot_number, msg)
 
         else:
             send_message("Check if you formatted the number correct. There seems to be a mistake.", bot_number, phone_no)
